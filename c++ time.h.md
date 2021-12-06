@@ -41,6 +41,13 @@ int main()
               << time_stamp.time_month + 1 << "-" << time_stamp.time_day << "-"
               << time_stamp.time_hour << "-" << time_stamp.time_min << "-"
               << time_stamp.time_sec << std::endl;
+    std::ofstream mt("./time.txt", std::ifstream::binary|std::ifstream::in);
+    mt.write(reinterpret_cast<char *>(&time_stamp),sizeof(Timestamp_st));
+    mt.close();
+    std::ifstream mm("./time.txt", std::ifstream::binary|std::ofstream::out);
+    Timestamp_st aaa;
+    mm.read(reinterpret_cast<char *>(&aaa), sizeof(Timestamp_st));
+    mm.close();
     return 0;
 }
 ```
