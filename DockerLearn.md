@@ -45,7 +45,7 @@
 
 `docker exec -it ID 指令`
 
-`docker exec -it ID /bin/bash`
+**docker exec -it ID /bin/bash**
 
 查看容器`docker ps -a`
 

@@ -121,7 +121,7 @@ origin - 这是 Git 给你克隆的仓库服务器的默认名字
 
 `git stash drop stash@{$num}`
 
-`git stash cleat`
+`git stash clear`
 
 丢弃储藏区的修改
 
