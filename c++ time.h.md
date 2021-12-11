@@ -24,7 +24,7 @@ void GetPackTimeStamp(Timestamp_st *time_stamp)
     struct timeval curr_tm;
     gettimeofday(&curr_tm, NULL);
     struct tm curr_time;
-    localtime_r((time_t *)&curr_tm.tv_sec, &curr_time);
+    localtime_r(reinterpret_cast(time_t *)&curr_tm.tv_sec, &curr_time);
     time_stamp->evtID = 0x0001;
     time_stamp->time_year = curr_time.tm_year + 1900;
     time_stamp->time_month = curr_time.tm_mon + 1;

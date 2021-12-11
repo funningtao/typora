@@ -111,17 +111,23 @@ origin - 这是 Git 给你克隆的仓库服务器的默认名字
 
 将工作区的修改临时保存在储藏区
 
-`git stash pop`
+`git stash save "save massage"`	添加备注
 
-`git stash apply`
+`git stash show`	显示做了哪些改动
+
+应用并删除
+
+`git stash pop`	恢复之前缓存的工作目录。**将对应的stash删除**，默认第一个，**stash@{num}**指定
+
+`git stash apply` 	**默认使用第一个存储，可以使用stash@{num}**
 
 将储藏区的内容恢复到工作区
 
 `git stash list`查看储藏区有那些临时修改
 
-`git stash drop stash@{$num}`
+`git stash drop stash@{num}`
 
-`git stash clear`
+`git stash clear`删除所有stash
 
 丢弃储藏区的修改
 
