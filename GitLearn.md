@@ -131,3 +131,34 @@ origin - 这是 Git 给你克隆的仓库服务器的默认名字
 
 丢弃储藏区的修改
 
+### 分支合并
+
+#### git merge和git rebase区别
+
+https://blog.csdn.net/michaelshare/article/details/79108233
+
+#### git merge
+
+git到需要被合并的分支
+
+`git merge `需要合并的分支
+
+如果是更早的合并，会做一个三方合并，2个快照，和一个祖先
+
+#### git cherry-pick
+
+把某一次提交拉到master分支
+
+`git cherry-pick e43a6fd3e94888d76779ad79fb568ed180e5fcdf`
+
+#### git rebase
+
+自动化cherry-pick命令，它计算出一系列的提交，然后再以它们在其他地方以同样的顺序一个一个的 `cherry-picks` 出它们。
+
+eg:
+
+`git checkout`修改的分支
+
+将提交到某一分支上的所有修改都移至另一分支上，就好像“重新播放”一样
+
+`git rebase master`
