@@ -15,3 +15,4 @@
 | quit        | q    | 退出gdb                            |
 | symbol-file | sy   | 从可执行文件中加载符号表           |
 
+`info threads`显示当前进程中的线程
